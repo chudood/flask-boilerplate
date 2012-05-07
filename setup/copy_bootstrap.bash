@@ -31,7 +31,7 @@ cp $BOOTSTRAP_DIR/favicon.ico $STATIC_DIR/favicon.ico
 
 mkdir -p $STATIC_DIR/js
 
-wget $JQUERY_URL -O $BOOTSTRAP_DIR/js
+wget $JQUERY_URL -O $BOOTSTRAP_DIR/js/jquery.min.js
 cp -r $BOOTSTRAP_DIR/js/*.js $STATIC_DIR/js/
 
 mkdir -p $STATIC_DIR/css
