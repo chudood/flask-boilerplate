@@ -108,7 +108,6 @@ def test():
 
 def update_html5():
     '''Update HTML5-Boilerplate.'''
-    local("cd bootstrap && git pull origin master")
     local("bash setup/copy_bootstrap.bash .")
     puts(colors.magenta("Showing git status, if there are no updates, then the subsequent commit will fail:"))
     local("git status")
