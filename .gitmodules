@@ -1,6 +1,0 @@
-[submodule "html5"]
-	path = html5
-	url = http://github.com/h5bp/html5-boilerplate.git
-[submodule "bootstrap"]
-	path = bootstrap
-	url = https://github.com/twitter/bootstrap.git

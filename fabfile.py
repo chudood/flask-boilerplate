@@ -108,12 +108,12 @@ def test():
 
 def update_html5():
     '''Update HTML5-Boilerplate.'''
-    local("cd html5 && git pull origin master")
-    local("bash setup/copy_html5.bash .")
+    local("cd bootstrap && git pull origin master")
+    local("bash setup/copy_bootstrap.bash .")
     puts(colors.magenta("Showing git status, if there are no updates, then the subsequent commit will fail:"))
     local("git status")
     puts(colors.magenta("Committing..."))
-    local("git commit -a -m 'Updated HTML5'")
+    local("git commit -a -m 'Updated Bootstrap'")
     puts(colors.magenta("Updated HTML5-Boilerplate"))
 
 def clear_pyc():
