@@ -8,3 +8,4 @@ Flask-Mail
 Flask-Cache
 Fabric
 python-memcached
+pyjade
