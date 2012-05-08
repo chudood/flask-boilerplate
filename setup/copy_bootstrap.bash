@@ -34,6 +34,8 @@ mkdir -p $STATIC_DIR/js
 wget $JQUERY_URL -O $BOOTSTRAP_DIR/js/jquery.min.js
 cp -r $BOOTSTRAP_DIR/js/*.js $STATIC_DIR/js/
 
+cp -r $BOOTSTRAP_DIR/img/*.js $STATIC_DIR/img/
+
 mkdir -p $STATIC_DIR/css
 cp $BOOTSTRAP_DIR/css/*.css $STATIC_DIR/css/
 

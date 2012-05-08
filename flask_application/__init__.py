@@ -8,6 +8,7 @@ FLASK_APP_DIR = os.path.dirname(os.path.abspath(__file__))
 from flask import Flask
 app = Flask(__name__)
 
+
 # Config
 if os.getenv('DEV') == 'yes':
     app.config.from_object('flask_application.config.DevelopmentConfig')
@@ -83,6 +84,10 @@ app.cache.fetch = cache_fetch
 # Helpers
 from flask_application.helpers import datetimeformat
 app.jinja_env.filters['datetimeformat'] = datetimeformat
+
+from helpers import ReverseProxied
+app.wsgi_app = ReverseProxied(app.wsgi_app)
+app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
 
 # Business Logic
 # http://flask.pocoo.org/docs/patterns/packages/
