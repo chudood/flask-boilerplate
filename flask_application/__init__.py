@@ -56,7 +56,7 @@ else:
     app.logger.info("Emailing on error is DISABLED")
 
 # Assets
-from flaskext.assets import Environment
+from flask.ext.assets import Environment
 assets = Environment(app)
 # Ensure output directory exists
 assets_output_dir = os.path.join(FLASK_APP_DIR, 'static', 'gen')
@@ -64,7 +64,7 @@ if not os.path.exists(assets_output_dir):
     os.mkdir(assets_output_dir)
 
 # Email
-from flaskext.mail import Mail
+from flask.ext.mail import Mail
 mail = Mail(app)
 
 # Memcache
